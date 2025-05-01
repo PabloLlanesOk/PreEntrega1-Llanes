@@ -10,7 +10,7 @@ const Item = ({ titulo, descripcion, precio, photo }) => {
           <Card.Title>{titulo}</Card.Title>
           <Card.Text>{descripcion}</Card.Text>
           <Card.Text>${precio}</Card.Text>
-          <Button variant="primary">Ver Descripcion</Button>
+          <Button variant="primary">Ver Producto</Button>
         </Card.Body>
       </Card>
     </div>

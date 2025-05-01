@@ -5,7 +5,7 @@ const ItemList = ({ productos }) => {
   return (
     <div>
       {productos.map((e, i) => (
-        <Item key={`${e.titulo}-${i}`} />
+        <Item key={`${e.titulo}-${i}`} {...e} />
       ))}
     </div>
   );
