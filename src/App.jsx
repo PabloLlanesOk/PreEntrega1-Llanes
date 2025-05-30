@@ -1,18 +1,25 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import { ItemListContainer } from "./Components";
-import CollapsibleExample from "./Components/NavBar";
+import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
+import NavBar from "./Components/NavBar";
+import Cart from "./Components/Cart/Cart";
+
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <CollapsibleExample />
-      <ItemListContainer />
-    </>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        {/* Ruta principal */}
+        <Route path="/" element={<ItemListContainer />} />
+        
+        {/* Ruta para categorías */}
+        <Route path="/categoria/:categoriaSeleccionada" element={<ItemListContainer />} />
+        
+        {/* Ruta del carrito */}
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
