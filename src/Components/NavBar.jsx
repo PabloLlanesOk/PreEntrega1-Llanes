@@ -4,12 +4,12 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import CartWidget from "./Cart/CartWidget";
 import Logo from "../assets/DALL·E 2023-05-02 20.58.47 - a logo of a sun animated with glasses that is very nice.png";
-import { Link } from "react-router-dom"; // ✅ Importar Link
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" style={{borderRadius: "50px"}}>
-      <Container>
+    <Navbar collapseOnSelect expand="lg" style={{borderRadius: "50px", border: "3px solid #06391E", borderColor: "black", backgroundColor: "white"}}>
+      <Container >
         <Navbar.Brand as={Link} to="/">
           <img
             src={Logo}
@@ -18,7 +18,7 @@ function NavBar() {
             height="50"
           />
           Libreria El Sol
-        </Navbar.Brand>
+        </Navbar.Brand >
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -33,7 +33,7 @@ function NavBar() {
           <Nav className="align-items-center gap-3">
             <Nav.Link as={Link} to="/iniciar-sesion">Iniciar Sesión</Nav.Link>
             <Nav.Link as={Link} to="/registrarse">Registrarse</Nav.Link>
-            <CartWidget/>
+            <CartWidget style={{}} />
           </Nav>
         </Navbar.Collapse>
       </Container>

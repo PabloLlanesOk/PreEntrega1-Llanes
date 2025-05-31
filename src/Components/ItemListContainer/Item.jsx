@@ -18,7 +18,7 @@ const Item = ({ title, description, price, photo, category }) => {
   };
 
   return (
-    <Card style={{ width: "14rem", height: "27rem" }}>
+    <Card style={{ width: "14rem", height: "27rem", border: "2px solid #06391E", borderRadius: "20px"}}>
       <Card.Img
         variant="top"
         src={photo}
@@ -43,7 +43,7 @@ const Item = ({ title, description, price, photo, category }) => {
           variant="primary"
           onClick={handleAgregar}
           disabled={cantidad === 0}
-          style={{ fontSize: "0.85rem" }}
+          style={{ fontSize: "0.85rem", backgroundColor: "#0148ED"}}
         >
           Añadir al Carrito
         </Button>
