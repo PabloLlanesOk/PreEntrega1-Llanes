@@ -4,13 +4,11 @@ export const CartContext = createContext();
 export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
-  // 1. Leer del localStorage si existe
   const [carrito, setCarrito] = useState(() => {
     const carritoGuardado = localStorage.getItem("carrito");
     return carritoGuardado ? JSON.parse(carritoGuardado) : [];
   });
 
-  // 2. Guardar en localStorage cuando cambie el carrito
   useEffect(() => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }, [carrito]);

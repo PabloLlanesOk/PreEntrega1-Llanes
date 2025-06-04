@@ -14,7 +14,7 @@ const Item = ({ title, description, price, photo, category }) => {
   const handleAgregar = () => {
     const producto = { titulo: title, description, price, photo, category };
     agregarAlCarrito(producto, cantidad);
-    setCantidad(0); // Reinicia el contador si querés
+    setCantidad(0);
   };
 
   return (
@@ -28,7 +28,6 @@ const Item = ({ title, description, price, photo, category }) => {
         <Card.Title className="small">{title}</Card.Title>
         <Card.Text className="card-description">{description}</Card.Text>
         <Card.Text>${price}</Card.Text>
-
         <div className="d-flex justify-content-center align-items-center mb-2">
           <Button variant="secondary" size="sm" onClick={disminuir}>
             -
@@ -38,7 +37,6 @@ const Item = ({ title, description, price, photo, category }) => {
             +
           </Button>
         </div>
-
         <Button
           variant="primary"
           onClick={handleAgregar}

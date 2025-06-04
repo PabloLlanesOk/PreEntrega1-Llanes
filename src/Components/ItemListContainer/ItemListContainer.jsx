@@ -27,11 +27,10 @@ import Cuaderno10 from "../../assets/Cuaderno ABC A4 100h.png";
 import Cuaderno11 from "../../assets/Cuaderno America A4 80h.jpg";
 import Cuaderno12 from "../../assets/Cuaderno Avon 84H.png";
 
-import { useParams } from "react-router-dom"; // 👈 Necesario para leer la categoría de la URL
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
-  const { categoriaSeleccionada } = useParams(); // 👈 Esto viene desde la URL, por ejemplo /categoria/utiles
-
+  const { categoriaSeleccionada } = useParams();
   const productos = [
     {
       title: "Lapiz Faber Castell",
